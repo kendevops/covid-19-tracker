@@ -19,8 +19,8 @@ export const fetchData = async () => {
 
 export const fetchDailyData = async () => {
   try {
-    const response = await axios.get(`${url}/daily`);
+    const { data } = await axios.get(`${url}/daily`);
 
-    return response;
+    console.log(data);
   } catch (error) {}
 };
