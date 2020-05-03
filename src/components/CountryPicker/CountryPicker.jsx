@@ -11,7 +11,9 @@ const CountryPicker = () => {
       const fetchCountries = async () => {
         setFetchedCountries(await countries);
       };
-    });
+
+      fetchCountries();
+    }, [setFetchedCountries]);
   };
   return (
     <FormControl className={styles.formControl}>
